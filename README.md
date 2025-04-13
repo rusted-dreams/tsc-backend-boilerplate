@@ -72,11 +72,12 @@ docker run --name posgres-db-name \
 ```
 - or run `docker run --name postgres-db-name -d -p 5432:5432 -e POSTGRES_PASSWORD=<pg-password> -v pg-volume-name:/var/lib/postgresql/data/ postgres`
 <br>
+
 - you can connect to this instance using `psql` or `pgadmin` gui.
-<br>
 - first lets connect using the `psql` using the command:
 - `docker exec -it pg-db-name psql -U postgres`
 <br>
+
 - to connect using the `pgadmin` gui docker image run the following commands
 - `docker pull dpage/pgadmin4`
 - follwed by `docker run --name pgadmin -d -p 5050:80 -e PGADMIN_DEFAULT_EMAIL=user@email.com -e PGADMIN_DEFAULT_PASSWORD=<your-password> dpage/pgadmin4`
